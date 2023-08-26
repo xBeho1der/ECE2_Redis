@@ -23,5 +23,4 @@ go.work
 # Debug directory
 .idea
 .vscode
-
-logs/*
+logs/
