@@ -13,9 +13,9 @@
 
 ## 使用说明
 
-### Prerequisites
+### 迁至要求
 
-- 拥有Go语言编程环境
+- 拥有Go语言编程环境。
 - 安装Redis数据库：需要在计算机上安装Redis数据库。您可以从[Redis官方网站](https://redis.io)下载适用于您的操作系统的安装程序或源代码，并按照说明进行安装。
 
 
@@ -48,3 +48,30 @@ redis-cli -p 6399
 ```
 
 ## 命令
+
+命令行提供命令补全功能。
+
+```bash
+set key value [expiration EX seconds|PX milliseconds] [NX|XX] 设置key-value
+e.g set Testkey Testvalue EX 10
+
+del key 删除key
+e.g. del Testkey
+
+expire key seconds 设置过期时间
+e.g expire Testkey 100
+
+exists key 判断key是否存在
+e.g. exists Testkey
+
+ttl key 获取剩余时间
+e.g. ttl Testkey
+
+get key 获取key对应的value
+e.g. get Testkey
+
+keys * 获取所有key
+e.g. keys *
+```
+
+大部分命令用法可参考[Redis官方文档](https://redis.io/commands)，由于本项目是一个简化版的Redis，所以不支持所有的命令。
